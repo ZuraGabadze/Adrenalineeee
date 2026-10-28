@@ -1,0 +1,208 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Hardened Global Primitives
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null && request.auth.token.email_verified == true;
+    }
+
+    function isBootstrappedAdmin() {
+      return isSignedIn() && request.auth.token.email == "gabuniaannygemini@gmail.com";
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        isBootstrappedAdmin() ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // Validation Blueprints
+    function isValidSiteSettings(data) {
+      return data.keys().hasAll([
+        'serverName', 'serverIp', 'discordInviteCode', 'discordInviteUrl',
+        'maintenanceMode', 'announcementKa', 'announcementEn', 'updatedAt', 'authorId'
+      ]) &&
+      data.keys().hasOnly([
+        'serverName', 'serverIp', 'discordInviteCode', 'discordInviteUrl',
+        'maintenanceMode', 'announcementKa', 'announcementEn', 'updatedAt', 'authorId'
+      ]) &&
+      data.serverName is string && data.serverName.size() >= 1 && data.serverName.size() <= 64 &&
+      data.serverIp is string && data.serverIp.size() >= 1 && data.serverIp.size() <= 128 &&
+      data.discordInviteCode is string && data.discordInviteCode.size() >= 1 && data.discordInviteCode.size() <= 64 &&
+      data.discordInviteUrl is string && data.discordInviteUrl.size() >= 1 && data.discordInviteUrl.size() <= 256 &&
+      data.maintenanceMode is bool &&
+      data.announcementKa is string && data.announcementKa.size() <= 500 &&
+      data.announcementEn is string && data.announcementEn.size() <= 500 &&
+      data.updatedAt is timestamp &&
+      isValidId(data.authorId) &&
+      data.authorId == request.auth.uid;
+    }
+
+    function isValidProduct(data) {
+      return data.keys().hasAll([
+        'id', 'type', 'gamemode', 'name', 'color', 'price',
+        'visible', 'sortOrder', 'authorId', 'createdAt', 'updatedAt'
+      ]) &&
+      data.keys().hasOnly([
+        'id', 'type', 'gamemode', 'name', 'color', 'price',
+        'visible', 'sortOrder', 'authorId', 'createdAt', 'updatedAt'
+      ]) &&
+      isValidId(data.id) &&
+      data.type is string && (data.type == 'rank' || data.type == 'key') &&
+      data.gamemode is string && (data.gamemode == 'smp' || data.gamemode == 'oneblock' || data.gamemode == 'global') &&
+      data.name is string && data.name.size() >= 1 && data.name.size() <= 64 &&
+      data.color is string && data.color.size() == 7 && data.color.matches('^#[0-9A-Fa-f]{6}$') &&
+      data.price is number && data.price >= 0 && data.price <= 10000 &&
+      data.visible is bool &&
+      data.sortOrder is number && data.sortOrder >= 0 && data.sortOrder <= 10000 &&
+      isValidId(data.authorId) &&
+      data.authorId == request.auth.uid &&
+      data.createdAt is timestamp &&
+      data.updatedAt is timestamp;
+    }
+
+    function isValidOrder(data) {
+      return data.keys().hasAll([
+        'id', 'ownerId', 'mcNickname', 'totalGel', 'status',
+        'paymentMethod', 'createdAt', 'updatedAt'
+      ]) &&
+      data.keys().hasOnly([
+        'id', 'ownerId', 'mcNickname', 'totalGel', 'status',
+        'paymentMethod', 'createdAt', 'updatedAt'
+      ]) &&
+      isValidId(data.id) &&
+      isValidId(data.ownerId) &&
+      data.mcNickname is string && data.mcNickname.size() >= 3 && data.mcNickname.size() <= 32 &&
+      data.totalGel is number && data.totalGel >= 0 && data.totalGel <= 100000 &&
+      data.status is string && (
+        data.status == 'pending' ||
+        data.status == 'paid' ||
+        data.status == 'delivering' ||
+        data.status == 'delivered' ||
+        data.status == 'failed' ||
+        data.status == 'refunded'
+      ) &&
+      data.paymentMethod is string && (
+        data.paymentMethod == 'manual' ||
+        data.paymentMethod == 'bog_ipay' ||
+        data.paymentMethod == 'tbc' ||
+        data.paymentMethod == 'flitt' ||
+        data.paymentMethod == 'payze'
+      ) &&
+      data.createdAt is timestamp &&
+      data.updatedAt is timestamp;
+    }
+
+    function isValidAdminRecord(data) {
+      return data.keys().hasAll(['uid', 'role', 'createdAt']) &&
+      data.keys().hasOnly(['uid', 'role', 'createdAt']) &&
+      isValidId(data.uid) &&
+      data.role is string && (data.role == 'admin' || data.role == 'owner') &&
+      data.createdAt is timestamp;
+    }
+
+    function isValidAuditLog(data) {
+      return data.keys().hasAll(['id', 'actorId', 'action', 'details', 'createdAt']) &&
+      data.keys().hasOnly(['id', 'actorId', 'action', 'details', 'createdAt']) &&
+      isValidId(data.id) &&
+      isValidId(data.actorId) &&
+      data.actorId == request.auth.uid &&
+      data.action is string && data.action.size() >= 1 && data.action.size() <= 128 &&
+      data.details is string && data.details.size() <= 1000 &&
+      data.createdAt is timestamp;
+    }
+
+    // 1. Site Settings
+    match /site_settings/{settingId} {
+      allow get: if isSignedIn() && isValidId(settingId);
+      allow list: if isSignedIn() && resource.data.serverName is string;
+      allow create: if isSignedIn() && isValidId(settingId) && isValidSiteSettings(incoming()) && incoming().updatedAt == request.time && isAdmin();
+      allow update: if isSignedIn() && isValidId(settingId) && isValidSiteSettings(incoming()) && incoming().updatedAt == request.time && isAdmin() && (
+        incoming().diff(existing()).affectedKeys().hasOnly([
+          'serverName', 'serverIp', 'discordInviteCode', 'discordInviteUrl',
+          'maintenanceMode', 'announcementKa', 'announcementEn', 'updatedAt', 'authorId'
+        ])
+      );
+      allow delete: if isSignedIn() && isValidId(settingId) && isAdmin();
+    }
+
+    // 2. Store Products
+    match /products/{productId} {
+      allow get: if isSignedIn() && isValidId(productId) && (existing().visible == true || isAdmin());
+      allow list: if isSignedIn() && (resource.data.visible == true || isAdmin());
+      allow create: if isSignedIn() && isValidId(productId) && incoming().id == productId && isValidProduct(incoming()) && incoming().createdAt == request.time && incoming().updatedAt == request.time && isAdmin();
+      allow update: if isSignedIn() && isValidId(productId) && isValidProduct(incoming()) &&
+        incoming().id == existing().id &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().updatedAt == request.time &&
+        isAdmin() && (
+          incoming().diff(existing()).affectedKeys().hasOnly([
+            'type', 'gamemode', 'name', 'color', 'price', 'visible', 'sortOrder', 'authorId', 'updatedAt'
+          ])
+        );
+      allow delete: if isSignedIn() && isValidId(productId) && isAdmin();
+    }
+
+    // 3. Orders
+    match /orders/{orderId} {
+      allow get: if isSignedIn() && isValidId(orderId) && (existing().ownerId == request.auth.uid || isAdmin());
+      allow list: if isSignedIn() && (resource.data.ownerId == request.auth.uid || isAdmin());
+      allow create: if isSignedIn() && isValidId(orderId) &&
+        incoming().id == orderId &&
+        isValidOrder(incoming()) &&
+        incoming().ownerId == request.auth.uid &&
+        incoming().status == 'pending' &&
+        incoming().createdAt == request.time &&
+        incoming().updatedAt == request.time;
+      allow update: if isSignedIn() && isValidId(orderId) && isValidOrder(incoming()) &&
+        incoming().id == existing().id &&
+        incoming().ownerId == existing().ownerId &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().updatedAt == request.time && (
+          isAdmin() && incoming().diff(existing()).affectedKeys().hasOnly(['status', 'updatedAt'])
+        );
+      allow delete: if isSignedIn() && isValidId(orderId) && isAdmin();
+    }
+
+    // 4. Admins
+    match /admins/{adminId} {
+      allow get: if isSignedIn() && isValidId(adminId) && (request.auth.uid == adminId || isAdmin());
+      allow list: if isSignedIn() && isAdmin() && resource.data.uid is string;
+      allow create: if isSignedIn() && isValidId(adminId) && incoming().uid == adminId && isValidAdminRecord(incoming()) && incoming().createdAt == request.time && isBootstrappedAdmin();
+      allow update: if isSignedIn() && isValidId(adminId) && isValidAdminRecord(incoming()) &&
+        incoming().uid == existing().uid &&
+        incoming().createdAt == existing().createdAt &&
+        isBootstrappedAdmin() &&
+        incoming().diff(existing()).affectedKeys().hasOnly(['role']);
+      allow delete: if isSignedIn() && isValidId(adminId) && isBootstrappedAdmin();
+    }
+
+    // 5. Audit Logs (Append-Only)
+    match /audit_logs/{logId} {
+      allow get: if isSignedIn() && isValidId(logId) && isAdmin();
+      allow list: if isSignedIn() && isAdmin() && resource.data.actorId is string;
+      allow create: if isSignedIn() && isValidId(logId) && incoming().id == logId && isValidAuditLog(incoming()) && incoming().createdAt == request.time && isAdmin();
+      allow update: if false;
+      allow delete: if false;
+    }
+  }
+}

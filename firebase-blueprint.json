@@ -1,0 +1,252 @@
+{
+  "entities": {
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Global site configuration, colors, texts, and maintenance mode for ADRENALINEE Store.",
+      "type": "object",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "maxLength": 64,
+          "minLength": 1
+        },
+        "serverIp": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "discordInviteCode": {
+          "type": "string",
+          "maxLength": 64,
+          "minLength": 1
+        },
+        "discordInviteUrl": {
+          "type": "string",
+          "maxLength": 256,
+          "minLength": 1
+        },
+        "maintenanceMode": {
+          "type": "boolean"
+        },
+        "announcementKa": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "announcementEn": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "authorId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        }
+      },
+      "required": [
+        "serverName",
+        "serverIp",
+        "discordInviteCode",
+        "discordInviteUrl",
+        "maintenanceMode",
+        "announcementKa",
+        "announcementEn",
+        "updatedAt",
+        "authorId"
+      ]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Store product representing a Rank or Crate Key for SMP or Oneblock.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["rank", "key"]
+        },
+        "gamemode": {
+          "type": "string",
+          "enum": ["smp", "oneblock", "global"]
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 64,
+          "minLength": 1
+        },
+        "color": {
+          "type": "string",
+          "maxLength": 16,
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "price": {
+          "type": "number"
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "sortOrder": {
+          "type": "number"
+        },
+        "authorId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "gamemode",
+        "name",
+        "color",
+        "price",
+        "visible",
+        "sortOrder",
+        "authorId",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer order record with payment and delivery state.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "mcNickname": {
+          "type": "string",
+          "maxLength": 32,
+          "minLength": 3
+        },
+        "totalGel": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "paid", "delivering", "delivered", "failed", "refunded"]
+        },
+        "paymentMethod": {
+          "type": "string",
+          "enum": ["manual", "bog_ipay", "tbc", "flitt", "payze"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "ownerId",
+        "mcNickname",
+        "totalGel",
+        "status",
+        "paymentMethod",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "AdminRecord": {
+      "title": "AdminRecord",
+      "description": "Trusted administrator membership document.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin", "owner"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "role", "createdAt"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Immutable administrative action log entry.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "actorId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "action": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "details": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["id", "actorId", "action", "details", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/site_settings/{settingId}": {
+      "schema": { "$ref": "#/entities/SiteSettings" },
+      "description": "Global site settings documents managed by admins."
+    },
+    "/products/{productId}": {
+      "schema": { "$ref": "#/entities/Product" },
+      "description": "Store catalog products (ranks and keys) managed by admins."
+    },
+    "/orders/{orderId}": {
+      "schema": { "$ref": "#/entities/Order" },
+      "description": "Orders owned by verified users and managed by admins."
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/AdminRecord" },
+      "description": "Admin role lookup records."
+    },
+    "/audit_logs/{logId}": {
+      "schema": { "$ref": "#/entities/AuditLog" },
+      "description": "Immutable security audit logs written by admins."
+    }
+  }
+}

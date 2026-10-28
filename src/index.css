@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #05030A;
+  --bg-secondary: #0B0714;
+  --color-primary: #8A00FF;
+  --color-electric: #C800FF;
+  --color-indigo: #4C1D95;
+  --color-lavender: #C4B5FD;
+  --color-magenta: #FF2BD6;
+  --color-cyan: #00F5FF;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #F5F3FF;
+  font-family: 'Noto Sans Georgian', 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.font-pixel {
+  font-family: 'Silkscreen', 'Press Start 2P', monospace;
+}
+
+.font-georgian {
+  font-family: 'Noto Sans Georgian', 'Inter', sans-serif;
+}
+
+.font-nums {
+  font-family: 'Inter', sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-indigo), var(--color-primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-electric);
+}
+
+/* ECG Heartbeat Animation */
+@keyframes ecgSweep {
+  0% {
+    stroke-dashoffset: 1200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.ecg-line-animated {
+  stroke-dasharray: 280 920;
+  animation: ecgSweep var(--ecg-duration, 1.8s) linear infinite;
+}
+
+/* Card Shimmer Sweep */
+@keyframes cardShimmer {
+  0% {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(240%) skewX(-18deg);
+  }
+}
+
+.group:hover .shimmer-sweep {
+  animation: cardShimmer 1.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Glitch Logo Hover */
+@keyframes logoGlitch {
+  0%, 100% {
+    text-shadow: -2px 0 var(--color-electric), 2px 0 var(--color-cyan);
+    transform: translate(0, 0);
+  }
+  25% {
+    text-shadow: 2px -1px var(--color-magenta), -2px 1px var(--color-cyan);
+    transform: translate(-1px, 1px);
+  }
+  50% {
+    text-shadow: -2px 1px var(--color-primary), 2px -1px var(--color-electric);
+    transform: translate(1px, -1px);
+  }
+  75% {
+    text-shadow: 1px 1px var(--color-cyan), -2px 0 var(--color-magenta);
+    transform: translate(-1px, 0);
+  }
+}
+
+.logo-glitch:hover {
+  animation: logoGlitch 0.32s steps(2, end) infinite;
+}
+
+/* Floating Voxel Cube */
+@keyframes floatCube {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(6deg);
+  }
+}
+
+.animate-float-cube {
+  animation: floatCube 4.5s ease-in-out infinite;
+}
+
+/* Subtle Noise Overlay */
+.bg-noise-pattern {
+  background-image: radial-gradient(rgba(200, 0, 255, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecg-line-animated,
+  .animate-float-cube,
+  .logo-glitch:hover {
+    animation: none !important;
+  }
+}

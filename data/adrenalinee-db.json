@@ -1,0 +1,1019 @@
+{
+  "settings": {
+    "serverName": "ADRENALINEE",
+    "serverIp": "adrenalinee.run",
+    "serverVersion": "1.20.4 — 1.21.x",
+    "discordInviteCode": "adrenalinee",
+    "discordInviteUrl": "https://discord.gg/adrenalinee",
+    "tiktokUrl": "https://tiktok.com/@adrenalinee.mc",
+    "youtubeUrl": "https://youtube.com/@adrenalineemc",
+    "instagramUrl": "https://instagram.com/adrenalinee.mc",
+    "maintenanceMode": false,
+    "announcementEnabled": true,
+    "announcement": {
+      "ka": "ახალი სეზონი დაიწყო! გამოიყენეთ კუპონი ADRENALINE10 10%-იანი ფასდაკლებისთვის ყველა რანკსა და გასაღებზე.",
+      "en": "New Season is LIVE! Use coupon code ADRENALINE10 for 10% OFF all ranks and crate keys."
+    },
+    "heroTitle": {
+      "ka": "იგრძენი ნამდვილი ადრენალინი ქართულ MINECRAFT სამყაროში",
+      "en": "FEEL PURE ADRENALINE IN THE PREMIER GEORGIAN MINECRAFT REALM"
+    },
+    "heroSubtitle": {
+      "ka": "უნიკალური Oneblock და SMP სერვერი უწყვეტი პულსით, დაბალანსებული ეკონომიკითა და მყისიერი ავტომატური მიწოდებით.",
+      "en": "Custom Oneblock & SMP realms engineered with zero lag, balanced player economy, and instant automated item delivery."
+    },
+    "howToJoinSteps": [
+      {
+        "ka": "1. გახსენით Minecraft Java Edition (ვერსია 1.20.x ან 1.21.x) და გადადით Multiplayer-ში.",
+        "en": "1. Launch Minecraft Java Edition (version 1.20.x or 1.21.x) and open Multiplayer."
+      },
+      {
+        "ka": "2. დააჭირეთ Add Server-ს და შეიყვანეთ სერვერის მისამართი: adrenalinee.run",
+        "en": "2. Click Add Server and enter the server address: adrenalinee.run"
+      },
+      {
+        "ka": "3. შემოდით სერვერზე, აირჩიეთ სასურველი რეჟიმი (SMP ან Oneblock) და დააკავშირეთ თქვენი ანგარიში /link კოდით.",
+        "en": "3. Join the server, choose your realm (SMP or Oneblock), and link your account using /link CODE."
+      }
+    ],
+    "rules": [
+      {
+        "ka": "აკრძალულია ნებისმიერი სახის ჩეთ-კლიენტის, X-Ray-ს, მაკროსებისა და უსამართლო უპირატესობის გამოყენება.",
+        "en": "Use of hacked clients, X-Ray resource packs, macros, or unfair advantages is strictly prohibited."
+      },
+      {
+        "ka": "პატივი ეცით თითოეულ მოთამაშეს და ადმინისტრაციას; ტოქსიკურობა და შეურაცხყოფა ისჯება ბანით.",
+        "en": "Respect all players and staff members; hate speech, harassment, and toxicity lead to suspension."
+      },
+      {
+        "ka": "აკრძალულია სერვერის ხარვეზების (Exploits / Dupes) გამოყენება; აღმოჩენის შემთხვევაში აცნობეთ ადმინისტრაციას Discord-ში.",
+        "en": "Exploiting bugs or duplication glitches is forbidden; report any issues immediately on Discord."
+      },
+      {
+        "ka": "რეალური ფულით მოთამაშეებს შორის ვაჭრობა (IRL Trading) ოფიციალური მაღაზიის გარეთ მკაცრად აკრძალულია.",
+        "en": "Real-money trading (RMT) between players outside the official store is strictly forbidden."
+      }
+    ],
+    "buyingDeliveryInfo": [
+      {
+        "ka": "ავტორიზაცია და ვერიფიკაცია: შედით Discord-ით, გადაამოწმეთ რომ ხართ ჩვენს Discord სერვერზე და დააკავშირეთ Minecraft ნიკი /link კოდით.",
+        "en": "Login & Verification: Sign in with Discord, confirm membership in our Discord guild, and link your Minecraft username via /link CODE in-game."
+      },
+      {
+        "ka": "გადახდის მეთოდები: აირჩიეთ საბანკო გადარიცხვა (TBC / BOG) ან ონლაინ ბარათით გადახდა (BOG iPay / TBC / Flitt / Payze).",
+        "en": "Payment Options: Choose direct Georgian Bank Transfer (TBC / BOG) or instant card checkout (BOG iPay / TBC / Flitt / Payze)."
+      },
+      {
+        "ka": "მყისიერი მიწოდება: გადახდის დადასტურებისთანავე სერვერი RCON-ისა და პლაგინის რიგის მეშვეობით ავტომატურად გადმოგცემთ რანკს ან გასაღებებს.",
+        "en": "Automated Delivery: Once payment is confirmed, our RCON & Plugin Queue system automatically executes your rank and crate key commands in-game."
+      }
+    ],
+    "manualBankDetails": {
+      "bankName": "საქართველოს ბანკი (BOG) / თიბისი ბანკი (TBC)",
+      "iban": "GE00BG0000000555888999 / GE00TB0000000777888999",
+      "recipient": "ADRENALINEE NETWORK",
+      "noteInstruction": {
+        "ka": "დანიშნულებაში აუცილებლად მიუთითეთ თქვენი შეკვეთის კოდი და Minecraft ნიკნეიმი!",
+        "en": "Always include your Order ID and Minecraft Nickname in the transfer description!"
+      }
+    },
+    "palette": {
+      "bgPrimary": "#05030A",
+      "bgSecondary": "#0B0714",
+      "primaryPurple": "#8A00FF",
+      "electricViolet": "#C800FF",
+      "deepIndigo": "#4C1D95",
+      "lavenderAccent": "#C4B5FD",
+      "neonMagenta": "#FF2BD6",
+      "cyanAccent": "#00F5FF"
+    },
+    "media": {
+      "logoUrl": "",
+      "faviconUrl": "",
+      "bannerUrl": "",
+      "backgroundUrl": ""
+    },
+    "bundleDiscountsEnabled": true,
+    "updatedAt": "2026-10-28T12:00:00.000Z"
+  },
+  "gamemodes": [
+    {
+      "id": "smp",
+      "name": "SMP",
+      "subtitle": {
+        "ka": "კლასიკური გადარჩენა, კლანები, ეკონომიკა და ეპიკური ბრძოლები",
+        "en": "Survival Multiplayer, Claims, Player Economy & Custom Enchants"
+      },
+      "description": {
+        "ka": "შექმენით საკუთარი იმპერია, დაიცავით ტერიტორიები, ივაჭრეთ მოთამაშეების აუქციონზე და მიიღეთ მონაწილეობა ყოველკვირეულ ივენთებში.",
+        "en": "Build your empire, protect land claims, trade on the player auction house, and compete in weekly server-wide events."
+      },
+      "features": [
+        {
+          "ka": "ტერიტორიების დაცვა (Claims) და გუნდური სისტემა",
+          "en": "Grief-protected land claims & team management"
+        },
+        {
+          "ka": "მოთამაშეების აუქციონი, მაღაზიები და ბაუნთი სისტემა",
+          "en": "Player auction house, chest shops & bounties"
+        },
+        {
+          "ka": "უნიკალური ენჩანთები, ბოსები და კოსმეტიკური ეფექტები",
+          "en": "Custom enchantments, world bosses & cosmetics"
+        }
+      ],
+      "color": "#8A00FF",
+      "bannerUrl": "",
+      "sortOrder": 1,
+      "visible": true
+    },
+    {
+      "id": "oneblock",
+      "name": "Oneblock",
+      "subtitle": {
+        "ka": "დაიწყე ერთი ბლოკით და ააშენე უსაზღვრო მფრინავი იმპერია",
+        "en": "Start on a Single Floating Block and Evolve Your Sky Empire"
+      },
+      "description": {
+        "ka": "გაანადგურეთ ცენტრალური ბლოკი, გადადით ახალ ფაზებში, გააფართოვეთ კუნძული მეგობრებთან ერთად და ადით კუნძულების ტოპ რეიტინგში.",
+        "en": "Mine the regenerating core block, unlock progressive biome phases, expand your island coop, and climb the seasonal leaderboard."
+      },
+      "features": [
+        {
+          "ka": "15+ უნიკალური ბიომის ფაზა და კუნძულის გაძლიერებები",
+          "en": "15+ progressive biome phases & island upgrades"
+        },
+        {
+          "ka": "კოოპერატიული თამაში მეგობრებთან და მინიონები",
+          "en": "Co-op island team roles & automated minions"
+        },
+        {
+          "ka": "კუნძულის ფრენა, ექსკლუზიური კოსმეტიკა და გენერატორები",
+          "en": "Island flight, custom generators & island cosmetics"
+        }
+      ],
+      "color": "#C800FF",
+      "bannerUrl": "",
+      "sortOrder": 2,
+      "visible": true
+    }
+  ],
+  "products": [
+    {
+      "id": "smp-vip",
+      "type": "rank",
+      "gamemode": "smp",
+      "name": "VIP",
+      "badgeText": "TIER I",
+      "color": "#A1B2C3",
+      "price": 9.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "[VIP] პრეფიქსი ჩატსა და ტაბში",
+          "en": "[VIP] prefix in chat & tablist"
+        },
+        {
+          "ka": "3 სახლის დაყენება (/sethome)",
+          "en": "3 homes (/sethome)"
+        },
+        {
+          "ka": "/hat და /workbench ბრძანებები",
+          "en": "/hat and /workbench commands"
+        },
+        {
+          "ka": "ყოველკვირეული VIP კიტი (/kit vip)",
+          "en": "Weekly VIP kit (/kit vip)"
+        },
+        {
+          "ka": "რიგში პრიორიტეტული შესვლა",
+          "en": "Join-queue priority"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add vip"
+      ],
+      "visible": true,
+      "featured": false,
+      "sortOrder": 1
+    },
+    {
+      "id": "smp-vip-plus",
+      "type": "rank",
+      "gamemode": "smp",
+      "name": "VIP+",
+      "badgeText": "TIER II",
+      "color": "#FFD700",
+      "price": 14.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ყველა VIP პრივილეგია + [VIP+] პრეფიქსი",
+          "en": "All VIP perks + [VIP+] prefix"
+        },
+        {
+          "ka": "5 სახლის დაყენება (/sethome)",
+          "en": "5 homes (/sethome)"
+        },
+        {
+          "ka": "ვირტუალური ენდერ-სკივრი (/ec)",
+          "en": "Virtual Ender Chest (/ec)"
+        },
+        {
+          "ka": "/feed ბრძანება (30 წთ ქულდაუნი)",
+          "en": "/feed command (30m cooldown)"
+        },
+        {
+          "ka": "ნიკის შეცვლა (/nick) და VIP+ კიტი",
+          "en": "/nick command & VIP+ kit"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add vip+"
+      ],
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "smp-mvp",
+      "type": "rank",
+      "gamemode": "smp",
+      "name": "MVP",
+      "badgeText": "POPULAR",
+      "color": "#2178FF",
+      "price": 24.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ყველა VIP+ პრივილეგია + [MVP] პრეფიქსი",
+          "en": "All VIP+ perks + [MVP] prefix"
+        },
+        {
+          "ka": "8 სახლის დაყენება (/sethome)",
+          "en": "8 homes (/sethome)"
+        },
+        {
+          "ka": "/heal (1 სთ ქულდაუნი) და /repair (24 სთ ქულდაუნი)",
+          "en": "/heal (1h cooldown) & /repair (24h cooldown)"
+        },
+        {
+          "ka": "ფერადი ჩატი და დამატებითი Claim ბლოკები",
+          "en": "Colored chat & extra claim blocks"
+        },
+        {
+          "ka": "ყოველკვირეული MVP კიტი (/kit mvp)",
+          "en": "Weekly MVP kit (/kit mvp)"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add mvp"
+      ],
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3
+    },
+    {
+      "id": "smp-mvp-plus",
+      "type": "rank",
+      "gamemode": "smp",
+      "name": "MVP+",
+      "badgeText": "ELITE",
+      "color": "#12BC00",
+      "price": 36.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ყველა MVP პრივილეგია + [MVP+] პრეფიქსი",
+          "en": "All MVP perks + [MVP+] prefix"
+        },
+        {
+          "ka": "12 სახლის დაყენება (/sethome)",
+          "en": "12 homes (/sethome)"
+        },
+        {
+          "ka": "/disposal, /sit, /lay და /near ბრძანებები",
+          "en": "/disposal, /sit, /lay & /near commands"
+        },
+        {
+          "ka": "კოსმეტიკური ნაწილაკები (Particles) და Pets",
+          "en": "Cosmetic particles & companion pets"
+        },
+        {
+          "ka": "მძლავრი MVP+ კიტი (/kit mvp+)",
+          "en": "Exclusive MVP+ kit (/kit mvp+)"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add mvp+"
+      ],
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4
+    },
+    {
+      "id": "smp-sponsor",
+      "type": "rank",
+      "gamemode": "smp",
+      "name": "SPONSOR",
+      "badgeText": "ULTIMATE",
+      "color": "#00BCAD",
+      "price": 62.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ყველა MVP+ პრივილეგია + [SPONSOR] პრეფიქსი",
+          "en": "All MVP+ perks + [SPONSOR] prefix"
+        },
+        {
+          "ka": "20 სახლის დაყენება (/sethome)",
+          "en": "20 homes (/sethome)"
+        },
+        {
+          "ka": "ფრენა საკუთარ Claim-ში (/fly)",
+          "en": "Fly inside own land claims (/fly)"
+        },
+        {
+          "ka": "ინდივიდუალური შემოსვლის შეტყობინება",
+          "en": "Custom server join message"
+        },
+        {
+          "ka": "Sponsor Discord როლი + დახურული არხი",
+          "en": "Sponsor Discord role + private VIP channel"
+        },
+        {
+          "ka": "ყოველთვიური Void Key, პრიორიტეტული მხარდაჭერა და SPONSOR კიტი",
+          "en": "Monthly Void Key, priority support & SPONSOR kit"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add sponsor"
+      ],
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5
+    },
+    {
+      "id": "ob-iron",
+      "type": "rank",
+      "gamemode": "oneblock",
+      "name": "IRON",
+      "badgeText": "TIER I",
+      "color": "#A1B2C3",
+      "price": 9.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "[IRON] პრეფიქსი ჩატსა და ტაბში",
+          "en": "[IRON] prefix in chat & tablist"
+        },
+        {
+          "ka": "+25 კუნძულის ზომა (Island Size)",
+          "en": "+25 island border size"
+        },
+        {
+          "ka": "+2 კუნძულის წევრი (Island Members)",
+          "en": "+2 island team members"
+        },
+        {
+          "ka": "/workbench ბრძანება და IRON კიტი",
+          "en": "/workbench command & IRON kit"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add iron"
+      ],
+      "visible": true,
+      "featured": false,
+      "sortOrder": 6
+    },
+    {
+      "id": "ob-gold",
+      "type": "rank",
+      "gamemode": "oneblock",
+      "name": "GOLD",
+      "badgeText": "TIER II",
+      "color": "#FFD700",
+      "price": 14.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ყველა IRON პრივილეგია + [GOLD] პრეფიქსი",
+          "en": "All IRON perks + [GOLD] prefix"
+        },
+        {
+          "ka": "+50 კუნძულის ზომა და +4 წევრი",
+          "en": "+50 island size & +4 island members"
+        },
+        {
+          "ka": "ფრენა კუნძულზე (/fly) და /feed ბრძანება",
+          "en": "Island flight (/fly) & /feed command"
+        },
+        {
+          "ka": "ყოველკვირეული GOLD კიტი (/kit gold)",
+          "en": "Weekly GOLD kit (/kit gold)"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add gold"
+      ],
+      "visible": true,
+      "featured": true,
+      "sortOrder": 7
+    },
+    {
+      "id": "ob-diamond",
+      "type": "rank",
+      "gamemode": "oneblock",
+      "name": "DIAMOND",
+      "badgeText": "POPULAR",
+      "color": "#2178FF",
+      "price": 24.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ყველა GOLD პრივილეგია + [DIAMOND] პრეფიქსი",
+          "en": "All GOLD perks + [DIAMOND] prefix"
+        },
+        {
+          "ka": "+100 კუნძულის ზომა (Island Size)",
+          "en": "+100 island border size"
+        },
+        {
+          "ka": "/ec, /heal და /repair (24 სთ) ბრძანებები",
+          "en": "/ec, /heal & /repair (24h) commands"
+        },
+        {
+          "ka": "ყოველკვირეული DIAMOND კიტი (/kit diamond)",
+          "en": "Weekly DIAMOND kit (/kit diamond)"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add diamond"
+      ],
+      "visible": true,
+      "featured": true,
+      "sortOrder": 8
+    },
+    {
+      "id": "ob-emerald",
+      "type": "rank",
+      "gamemode": "oneblock",
+      "name": "EMERALD",
+      "badgeText": "ELITE",
+      "color": "#12BC00",
+      "price": 36.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ყველა DIAMOND პრივილეგია + [EMERALD] პრეფიქსი",
+          "en": "All DIAMOND perks + [EMERALD] prefix"
+        },
+        {
+          "ka": "+150 კუნძულის ზომა და +8 კუნძულის წევრი",
+          "en": "+150 island size & +8 island members"
+        },
+        {
+          "ka": "/nick ბრძანება, ნაწილაკები (Particles) და Pets",
+          "en": "/nick command, cosmetic particles & pets"
+        },
+        {
+          "ka": "მძლავრი EMERALD კიტი (/kit emerald)",
+          "en": "Exclusive EMERALD kit (/kit emerald)"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add emerald"
+      ],
+      "visible": true,
+      "featured": false,
+      "sortOrder": 9
+    },
+    {
+      "id": "ob-sponsor",
+      "type": "rank",
+      "gamemode": "oneblock",
+      "name": "SPONSOR",
+      "badgeText": "ULTIMATE",
+      "color": "#00BCAD",
+      "price": 62.99,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ყველა EMERALD პრივილეგია + [SPONSOR] პრეფიქსი",
+          "en": "All EMERALD perks + [SPONSOR] prefix"
+        },
+        {
+          "ka": "მაქსიმალური კუნძულის გაძლიერება (Max Island Upgrade)",
+          "en": "Maximum island border & generator upgrade"
+        },
+        {
+          "ka": "ექსკლუზიური კუნძულის კოსმეტიკა",
+          "en": "Exclusive island cosmetics & effects"
+        },
+        {
+          "ka": "ყოველთვიური Abyssal Key და Sponsor Discord როლი",
+          "en": "Monthly Abyssal Key & Sponsor Discord role"
+        },
+        {
+          "ka": "პრიორიტეტული მხარდაჭერა 24/7",
+          "en": "24/7 priority administrative support"
+        }
+      ],
+      "commands": [
+        "lp user {player} parent add sponsor"
+      ],
+      "visible": true,
+      "featured": true,
+      "sortOrder": 10
+    },
+    {
+      "id": "key-earth",
+      "type": "key",
+      "gamemode": "global",
+      "name": "Earth Key",
+      "badgeText": "STARTER CRATE",
+      "color": "#41FF00",
+      "price": 0.5,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "საწყისი რესურსები, მადნები და სასარგებლო ბლოკები",
+          "en": "Starter resources, ores, and building blocks"
+        },
+        {
+          "ka": "შანსი მოიგოთ სერვერის ვალუტა და XP ბოთლები",
+          "en": "Chance to win in-game currency and XP bottles"
+        }
+      ],
+      "commands": [
+        "crate key give {player} earth {amount}"
+      ],
+      "visible": true,
+      "sortOrder": 11
+    },
+    {
+      "id": "key-ocean",
+      "type": "key",
+      "gamemode": "global",
+      "name": "Ocean Key",
+      "badgeText": "AQUATIC CRATE",
+      "color": "#00F5FF",
+      "price": 1.5,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "გაუმჯობესებული იარაღები, ტრიდენტები და ზღვის საგანძური",
+          "en": "Enchanted gear, tridents, and ocean treasures"
+        },
+        {
+          "ka": "გაზრდილი შანსი იშვიათი ბუსტერების მოგების",
+          "en": "Higher drop rate for economy boosters"
+        }
+      ],
+      "commands": [
+        "crate key give {player} ocean {amount}"
+      ],
+      "visible": true,
+      "sortOrder": 12
+    },
+    {
+      "id": "key-sun",
+      "type": "key",
+      "gamemode": "global",
+      "name": "Sun Key",
+      "badgeText": "SOLAR CRATE",
+      "color": "#FFC11F",
+      "price": 2,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ოქროს აღჭურვილობა, სპაუნერები და მდიდარი ბონუსები",
+          "en": "Golden artifacts, mob spawners, and rich cash drops"
+        },
+        {
+          "ka": "შანსი მოიგოთ დროებითი ფრენის ბილეთები",
+          "en": "Chance to unlock temporary flight vouchers"
+        }
+      ],
+      "commands": [
+        "crate key give {player} sun {amount}"
+      ],
+      "visible": true,
+      "sortOrder": 13
+    },
+    {
+      "id": "key-blaze",
+      "type": "key",
+      "gamemode": "global",
+      "name": "Blaze Key",
+      "badgeText": "FIERY CRATE",
+      "color": "#FF7070",
+      "price": 3,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "ცეცხლოვანი ენჩანთები, ნეზერიტის ნაწილები და ბოს-სummon-ები",
+          "en": "Fire enchantments, Netherite ingots, and boss summons"
+        },
+        {
+          "ka": "შანსი მოიგოთ უფასო VIP / IRON რანკი",
+          "en": "Chance to win a permanent VIP / IRON rank"
+        }
+      ],
+      "commands": [
+        "crate key give {player} blaze {amount}"
+      ],
+      "visible": true,
+      "sortOrder": 14
+    },
+    {
+      "id": "key-inferno",
+      "type": "key",
+      "gamemode": "global",
+      "name": "Inferno Key",
+      "badgeText": "MYTHIC CRATE",
+      "color": "#FF0000",
+      "price": 3.5,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "უძლიერესი PvP აღჭურვილობა და მითიური არტეფაქტები",
+          "en": "High-tier PvP armor sets and mythic weapons"
+        },
+        {
+          "ka": "შანსი მოიგოთ MVP / DIAMOND რანკი",
+          "en": "Chance to win a permanent MVP / DIAMOND rank"
+        }
+      ],
+      "commands": [
+        "crate key give {player} inferno {amount}"
+      ],
+      "visible": true,
+      "sortOrder": 15
+    },
+    {
+      "id": "key-void",
+      "type": "key",
+      "gamemode": "global",
+      "name": "Void Key",
+      "badgeText": "COSMIC CRATE",
+      "color": "#C800FF",
+      "price": 4,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "უნიკალური Void იარაღები, მინიონები და ექსკლუზიური კოსმეტიკა",
+          "en": "Custom Void weapons, elite minions, and rare cosmetics"
+        },
+        {
+          "ka": "მაღალი შანსი ტოპ რანკებისა და გასაღებების პაკეტების",
+          "en": "High probability of top-tier ranks and key bundles"
+        }
+      ],
+      "commands": [
+        "crate key give {player} void {amount}"
+      ],
+      "visible": true,
+      "sortOrder": 16
+    },
+    {
+      "id": "key-abyssal",
+      "type": "key",
+      "gamemode": "global",
+      "name": "Abyssal Key",
+      "badgeText": "SUPREME CRATE",
+      "color": "#8A00FF",
+      "price": 5,
+      "thumbnail": "",
+      "perks": [
+        {
+          "ka": "სერვერის ყველაზე იშვიათი საგანძური, SPONSOR პრიზები და Max Gear",
+          "en": "The rarest server loot table, SPONSOR jackpots & Max Gear"
+        },
+        {
+          "ka": "გარანტირებული ელიტური ჯილდო ყოველი გახსნისას",
+          "en": "Guaranteed high-value legendary drop on every open"
+        }
+      ],
+      "commands": [
+        "crate key give {player} abyssal {amount}"
+      ],
+      "visible": true,
+      "sortOrder": 17
+    }
+  ],
+  "staff": [
+    {
+      "id": "staff-1",
+      "name": "CHABSKEYYY",
+      "role": "Owner",
+      "roleKa": "მფლობელი / Owner",
+      "roleColor": "#8A00FF",
+      "discordTag": "chabskeyyy",
+      "sortOrder": 1
+    },
+    {
+      "id": "staff-2",
+      "name": "SAITO",
+      "role": "Owner",
+      "roleKa": "მფლობელი / Owner",
+      "roleColor": "#C800FF",
+      "discordTag": "saito",
+      "sortOrder": 2
+    },
+    {
+      "id": "staff-3",
+      "name": "JAJO_1121",
+      "role": "Owner",
+      "roleKa": "მფლობელი / Owner",
+      "roleColor": "#FF2BD6",
+      "discordTag": "jajo_1121",
+      "sortOrder": 3
+    },
+    {
+      "id": "staff-4",
+      "name": "GODKISSED",
+      "role": "Owner",
+      "roleKa": "მფლობელი / Owner",
+      "roleColor": "#00F5FF",
+      "discordTag": "godkissed",
+      "sortOrder": 4
+    }
+  ],
+  "ads": [
+    {
+      "id": "ad-home-top",
+      "slot": "home-top",
+      "title": {
+        "ka": "გახსენი ABYSSAL სკივრი — მოიგე SPONSOR რანკი!",
+        "en": "UNLOCK THE ABYSSAL CRATE — WIN SPONSOR RANK!"
+      },
+      "subtitle": {
+        "ka": "შეიძინე 5+ გასაღები ერთად და მიიღე ავტომატური 10%-იანი Bundle ფასდაკლება კალათაში.",
+        "en": "Buy 5+ crate keys together and automatically unlock a 10% Bundle Discount in your cart."
+      },
+      "ctaText": {
+        "ka": "გასაღებების ნახვა",
+        "en": "Explore Crate Keys"
+      },
+      "imageUrl": "",
+      "linkUrl": "#store-keys",
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "enabled": true,
+      "clicks": 42
+    },
+    {
+      "id": "ad-home-middle",
+      "slot": "home-middle",
+      "title": {
+        "ka": "შემოუერთდი ADRENALINEE DISCORD საზოგადოებას",
+        "en": "JOIN THE OFFICIAL ADRENALINEE DISCORD COMMUNITY"
+      },
+      "subtitle": {
+        "ka": "ყოველკვირეული გათამაშებები, ტურნირები, განახლებები და 24/7 მხარდაჭერა.",
+        "en": "Weekly giveaways, PvP tournaments, patch notes, and 24/7 player support."
+      },
+      "ctaText": {
+        "ka": "Discord-ში შესვლა",
+        "en": "Join Discord Guild"
+      },
+      "imageUrl": "",
+      "linkUrl": "https://discord.gg/adrenalinee",
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "enabled": true,
+      "clicks": 89
+    },
+    {
+      "id": "ad-footer",
+      "slot": "footer",
+      "title": {
+        "ka": "გჭირდება დახმარება შეძენისას? გამოიყენე კოდი ADRENALINE10",
+        "en": "NEED HELP WITH CHECKOUT? USE CODE ADRENALINE10 FOR 10% OFF"
+      },
+      "subtitle": {
+        "ka": "ყველა შენაძენი მოწმდება და იგზავნება სერვერზე ავტომატურად.",
+        "en": "Every purchase is verified and delivered to your character automatically."
+      },
+      "ctaText": {
+        "ka": "მაღაზიაში გადასვლა",
+        "en": "Visit Store"
+      },
+      "imageUrl": "",
+      "linkUrl": "#store",
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "enabled": true,
+      "clicks": 19
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-1",
+      "question": {
+        "ka": "რამდენ ხანში დამერიცხება შეძენილი რანკი ან გასაღები?",
+        "en": "How fast will I receive my purchased Rank or Crate Keys?"
+      },
+      "answer": {
+        "ka": "ონლაინ გადახდის შემთხვევაში ნივთი იგზავნება მყისიერად (10-30 წამში). საბანკო გადარიცხვის (Manual) არჩევისას — ადმინისტრატორის მიერ დადასტურებისთანავე.",
+        "en": "For online gateway payments, items are delivered within 10–30 seconds. For manual bank transfers, delivery triggers immediately once confirmed by an admin."
+      },
+      "sortOrder": 1
+    },
+    {
+      "id": "faq-2",
+      "question": {
+        "ka": "აუცილებელია თუ არა სერვერზე ყოფნა ყიდვის მომენტში?",
+        "en": "Do I need to be online on the Minecraft server when buying?"
+      },
+      "answer": {
+        "ka": "თუ იყენებთ RCON-ს ან ჩვენს Plugin Queue სისტემას, შეკვეთა ინახება უსაფრთხო რიგში და გადმოგეცემათ სერვერზე შესვლისთანავე.",
+        "en": "Our delivery queue safely stores your commands and executes them automatically as soon as your character is online."
+      },
+      "sortOrder": 2
+    },
+    {
+      "id": "faq-3",
+      "question": {
+        "ka": "როგორ დავაკავშირო Discord და Minecraft ანგარიშები?",
+        "en": "How do I link and verify my Discord and Minecraft accounts?"
+      },
+      "answer": {
+        "ka": "გადადით „ანგარიში“ გვერდზე, გაიარეთ ავტორიზაცია Discord-ით, შეიყვანეთ თქვენი Minecraft ნიკი და მიღებული 8-ნიშნა კოდი ჩაწერეთ თამაშში: /link CODE",
+        "en": "Open the Account page, log in with Discord, enter your Minecraft username to generate an 8-character code, and run /link CODE in-game."
+      },
+      "sortOrder": 3
+    },
+    {
+      "id": "faq-4",
+      "question": {
+        "ka": "მოქმედებს თუ არა ფასდაკლება რამდენიმე გასაღების შეძენაზე?",
+        "en": "Are there bundle discounts when purchasing multiple Crate Keys?"
+      },
+      "answer": {
+        "ka": "დიახ! 3-4 გასაღებზე მოქმედებს 5%-იანი ფასდაკლება, 5-9 გასაღებზე — 10%, ხოლო 10 ან მეტ გასაღებზე — 15% ავტომატური ფასდაკლება.",
+        "en": "Yes! Buying 3–4 keys grants 5% off, 5–9 keys grants 10% off, and 10+ keys unlocks a 15% automatic bundle discount."
+      },
+      "sortOrder": 4
+    }
+  ],
+  "coupons": [
+    {
+      "id": "coupon-1",
+      "code": "ADRENALINE10",
+      "discountType": "percent",
+      "value": 10,
+      "minOrderGel": 5,
+      "maxUses": 500,
+      "usedCount": 14,
+      "active": true
+    },
+    {
+      "id": "coupon-2",
+      "code": "WELCOME5",
+      "discountType": "fixed",
+      "value": 5,
+      "minOrderGel": 20,
+      "maxUses": 100,
+      "usedCount": 6,
+      "active": true
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-9041",
+      "userId": "demo-user-1",
+      "discordUsername": "NikaGeo",
+      "mcNickname": "Nika_MC",
+      "items": [
+        {
+          "productId": "smp-mvp",
+          "name": "MVP",
+          "type": "rank",
+          "gamemode": "smp",
+          "color": "#2178FF",
+          "unitPrice": 24.99,
+          "quantity": 1,
+          "commands": [
+            "lp user {player} parent add mvp"
+          ]
+        },
+        {
+          "productId": "key-void",
+          "name": "Void Key",
+          "type": "key",
+          "gamemode": "global",
+          "color": "#C800FF",
+          "unitPrice": 4,
+          "quantity": 3,
+          "commands": [
+            "crate key give {player} void {amount}"
+          ]
+        }
+      ],
+      "subtotalGel": 36.99,
+      "bundleDiscountGel": 0.6,
+      "couponCode": "ADRENALINE10",
+      "couponDiscountGel": 3.64,
+      "totalGel": 32.75,
+      "paymentMethod": "bog_ipay",
+      "paymentReference": "BOG-TX-884120",
+      "status": "delivered",
+      "deliveryAttempts": 1,
+      "deliveryMethod": "plugin_queue",
+      "deliveryLog": [
+        "2026-10-28T10:15:00.000Z — Payment verified via BOG iPay",
+        "2026-10-28T10:15:08.000Z — Executed: lp user Nika_MC parent add mvp",
+        "2026-10-28T10:15:08.000Z — Executed: crate key give Nika_MC void 3"
+      ],
+      "createdAt": "2026-10-28T10:14:22.000Z",
+      "updatedAt": "2026-10-28T10:15:08.000Z"
+    },
+    {
+      "id": "ORD-9042",
+      "userId": "demo-user-2",
+      "discordUsername": "Gio_Tbilisi",
+      "mcNickname": "GiorgiPvP",
+      "items": [
+        {
+          "productId": "ob-sponsor",
+          "name": "SPONSOR",
+          "type": "rank",
+          "gamemode": "oneblock",
+          "color": "#00BCAD",
+          "unitPrice": 62.99,
+          "quantity": 1,
+          "commands": [
+            "lp user {player} parent add sponsor"
+          ]
+        }
+      ],
+      "subtotalGel": 62.99,
+      "bundleDiscountGel": 0,
+      "couponDiscountGel": 0,
+      "totalGel": 62.99,
+      "paymentMethod": "manual",
+      "transferSenderNote": "ORD-9042 GiorgiPvP TBC",
+      "status": "pending",
+      "deliveryAttempts": 0,
+      "deliveryLog": [
+        "2026-10-28T11:30:00.000Z — Order created (Manual Bank Transfer pending admin confirmation)"
+      ],
+      "createdAt": "2026-10-28T11:30:00.000Z",
+      "updatedAt": "2026-10-28T11:30:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "demo-user-1",
+      "discordUsername": "NikaGeo",
+      "discordAvatar": "https://mc-heads.net/avatar/CHABSKEYYY/64",
+      "inGuild": true,
+      "mcNickname": "Nika_MC",
+      "verified": true,
+      "banned": false,
+      "createdAt": "2026-10-20T09:00:00.000Z",
+      "updatedAt": "2026-10-20T09:05:00.000Z"
+    },
+    {
+      "id": "demo-user-2",
+      "discordUsername": "Gio_Tbilisi",
+      "discordAvatar": "https://mc-heads.net/avatar/SAITO/64",
+      "inGuild": true,
+      "mcNickname": "GiorgiPvP",
+      "verified": true,
+      "banned": false,
+      "createdAt": "2026-10-25T14:20:00.000Z",
+      "updatedAt": "2026-10-25T14:25:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1793215785228-6e6e79",
+      "actor": "admin",
+      "action": "ADMIN_LOGIN",
+      "details": "Admin logged in successfully",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-10-28T19:29:45.228Z"
+    },
+    {
+      "id": "log-1793215785227-0238ce",
+      "actor": "admin",
+      "action": "BOOTSTRAP_ADMIN_HASH",
+      "details": "Initialized scrypt admin password hash on first login",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-10-28T19:29:45.227Z"
+    },
+    {
+      "id": "log-1",
+      "actor": "SYSTEM",
+      "action": "INITIALIZE_STORE",
+      "details": "Seeded ADRENALINEE catalog with SMP & Oneblock ranks, 7 crate keys, and 4 owners.",
+      "createdAt": "2026-10-28T08:00:00.000Z"
+    }
+  ],
+  "deliveryQueue": [],
+  "processedWebhooks": []
+}

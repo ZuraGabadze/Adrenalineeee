@@ -1,0 +1,6 @@
+{
+  "name": "ADRENALINEE Store",
+  "description": "ოფიციალური Minecraft სერვერის მაღაზია ADRENALINEE — რანკები, გასაღებები, Oneblock და SMP რეჟიმები.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
